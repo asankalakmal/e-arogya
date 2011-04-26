@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>eArogya</groupId>
+  <artifactId>eArogya</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>E-Arogya</name>
+  <description>electronic health record system</description>
+  
+   <build>
+    <plugins>
+      <plugin> <groupId>org.apache.axis2</groupId> <artifactId>axis2-java2wsdl-maven-plugin</artifactId>
+        <version>1.5.4</version> <executions> <execution> <phase>process-classes</phase> <goals>
+        <goal>java2wsdl</goal> </goals> </execution> </executions> <configuration>
+        <className>earogya.ehr.ws.EHRServiceInterface</className>
+        <outputFileName>${project.build.directory}/EHRService.wsdl</outputFileName> </configuration> </plugin>
+  
+      <plugin>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-wsdl2code-maven-plugin</artifactId>
+        <version>1.5.4</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>wsdl2code</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <classpathElements>G:\Academic\workspace\target\axis2Example-1.0.0-SNAPSHOT\WEB-INF\services\HelloWs</classpathElements>
+          <wsdlFile>src/main/webapp/EHRService.wsdl</wsdlFile>
+          <databindingName>xmlbeans</databindingName>
+          <packageName>axis2Example.ws</packageName>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${project.build.directory}/axis2/wsdl2code/src</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin> 
+    </plugins> 
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-transport-http</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-transport-local</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.xmlbeans</groupId>
+      <artifactId>xmlbeans</artifactId>
+      <version>2.4.0</version>
+    </dependency>  
+  </dependencies>
+  
+</project>
