@@ -1,0 +1,10 @@
+<serviceGroup>
+  <service name="EHRService" targetNamespace="http://ws.ehr.earogya/">
+    <description>JNLPGenerator service</description>
+    <schema schemaNamespace="http://ws.axis2Example/" />
+    <parameter name="ServiceClass" locked="false">earogya.ehr.ws.EHRServiceInterface</parameter>
+    <operation name="getName">
+      <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+  </service>
+</serviceGroup>
