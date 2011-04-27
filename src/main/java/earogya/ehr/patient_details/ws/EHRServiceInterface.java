@@ -1,4 +1,4 @@
-package earogya.ehr.ws;
+package earogya.ehr.patient_details.ws;
 
 public class EHRServiceInterface {
 
