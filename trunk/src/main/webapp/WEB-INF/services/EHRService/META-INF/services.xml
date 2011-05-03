@@ -2,7 +2,7 @@
   <service name="EHRService" targetNamespace="http://ws.patient_details.ehr.earogya/">
     <description>JNLPGenerator service</description>
     <schema schemaNamespace="http://ws.patient_details.ehr.earogya/" />
-    <parameter name="ServiceClass" locked="false">earogya.ehr.patient_details.ws.EHRServiceInterface</parameter>
+    <parameter name="ServiceClass" locked="false">main.java.earogya.ehr.patient_details.ws.EHRServiceInterface</parameter>
     <operation name="getName">
       <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
     </operation>

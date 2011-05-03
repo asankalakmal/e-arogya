@@ -1,4 +1,4 @@
-package earogya.ehr.patient_details.ws;
+package main.java.earogya.ehr.patient_details.ws;
 
 public class EHRServiceInterface {
 

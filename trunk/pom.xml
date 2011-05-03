@@ -12,9 +12,9 @@
       <plugin> <groupId>org.apache.axis2</groupId> <artifactId>axis2-java2wsdl-maven-plugin</artifactId>
         <version>1.5.4</version> <executions> <execution> <phase>process-classes</phase> <goals>
         <goal>java2wsdl</goal> </goals> </execution> </executions> <configuration>
-        <className>earogya.ehr.patient_details.ws.EHRServiceInterface</className>
+        <className>main.java.earogya.ehr.patient_details.ws.EHRServiceInterface</className>
         <outputFileName>${project.build.directory}/EHRService.wsdl</outputFileName> </configuration> </plugin>
-   
+    
       <plugin>
         <groupId>org.apache.axis2</groupId>
         <artifactId>axis2-wsdl2code-maven-plugin</artifactId>
@@ -31,7 +31,7 @@
           <classpathElements>G:\Academic\workspace\target\eArogya-0.0.1-SNAPSHOT\WEB-INF\services\EHRService</classpathElements>
           <wsdlFile>src/main/webapp/EHRService.wsdl</wsdlFile>
           <databindingName>xmlbeans</databindingName>
-          <packageName>earogya.ehr.patient_details.ws</packageName>
+          <packageName>main.java.earogya.ehr.patient_details.ws</packageName>
         </configuration>
       </plugin>
 
@@ -62,7 +62,7 @@
       <version>2.5</version>
       <scope>provided</scope>
     </dependency>
- 
+  
     <dependency>
       <groupId>org.apache.axis2</groupId>
       <artifactId>axis2</artifactId>
