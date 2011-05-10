@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="main.java.earogya.ehr.patient_details.Person" table="person">
+	<id name="personID" type="int" column="person_id" >
+	   <generator class="assigned"/>
+	  </id>
+	  <property name="firstName">
+		 <column name="first_name" />
+	  </property>
+	  <property name="middleName">
+		<column name="middle_name"/>
+	  </property>
+	  <property name="surname">
+		<column name="surname"/>
+	  </property>
+	</class>
+</hibernate-mapping>
