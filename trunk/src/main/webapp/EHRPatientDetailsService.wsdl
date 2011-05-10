@@ -24,13 +24,13 @@
     <wsdl:message name="getNameResponse">
         <wsdl:part name="parameters" element="ns:getNameResponse"/>
     </wsdl:message>
-    <wsdl:portType name="EHRServiceInterfacePortType">
+    <wsdl:portType name="EHRPatientDetailsServiceInterfacePortType">
         <wsdl:operation name="getName">
             <wsdl:input message="ns:getNameRequest" wsaw:Action="urn:getName"/>
             <wsdl:output message="ns:getNameResponse" wsaw:Action="urn:getNameResponse"/>
         </wsdl:operation>
     </wsdl:portType>
-    <wsdl:binding name="EHRServiceInterfaceSoap11Binding" type="ns:EHRServiceInterfacePortType">
+    <wsdl:binding name="EHRPatientDetailsServiceInterfaceSoap11Binding" type="ns:EHRPatientDetailsServiceInterfacePortType">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <wsdl:operation name="getName">
             <soap:operation soapAction="urn:getName" style="document"/>
@@ -42,7 +42,7 @@
             </wsdl:output>
         </wsdl:operation>
     </wsdl:binding>
-    <wsdl:binding name="EHRServiceInterfaceSoap12Binding" type="ns:EHRServiceInterfacePortType">
+    <wsdl:binding name="EHRPatientDetailsServiceInterfaceSoap12Binding" type="ns:EHRPatientDetailsServiceInterfacePortType">
         <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <wsdl:operation name="getName">
             <soap12:operation soapAction="urn:getName" style="document"/>
@@ -54,10 +54,10 @@
             </wsdl:output>
         </wsdl:operation>
     </wsdl:binding>
-    <wsdl:binding name="EHRServiceInterfaceHttpBinding" type="ns:EHRServiceInterfacePortType">
+    <wsdl:binding name="EHRPatientDetailsServiceInterfaceHttpBinding" type="ns:EHRPatientDetailsServiceInterfacePortType">
         <http:binding verb="POST"/>
         <wsdl:operation name="getName">
-            <http:operation location="EHRServiceInterface/getName"/>
+            <http:operation location="EHRPatientDetailsServiceInterface/getName"/>
             <wsdl:input>
                 <mime:content type="text/xml" part="getName"/>
             </wsdl:input>
@@ -66,15 +66,15 @@
             </wsdl:output>
         </wsdl:operation>
     </wsdl:binding>
-    <wsdl:service name="EHRServiceInterface">
-        <wsdl:port name="EHRServiceInterfaceHttpSoap11Endpoint" binding="ns:EHRServiceInterfaceSoap11Binding">
-            <soap:address location="http://localhost:8080/axis2/services/EHRServiceInterface"/>
+    <wsdl:service name="EHRPatientDetailsServiceInterface">
+        <wsdl:port name="EHRPatientDetailsServiceInterfaceHttpSoap11Endpoint" binding="ns:EHRPatientDetailsServiceInterfaceSoap11Binding">
+            <soap:address location="http://localhost:8080/axis2/services/EHRPatientDetailsServiceInterface"/>
         </wsdl:port>
-        <wsdl:port name="EHRServiceInterfaceHttpSoap12Endpoint" binding="ns:EHRServiceInterfaceSoap12Binding">
-            <soap12:address location="http://localhost:8080/axis2/services/EHRServiceInterface"/>
+        <wsdl:port name="EHRPatientDetailsServiceInterfaceHttpSoap12Endpoint" binding="ns:EHRPatientDetailsServiceInterfaceSoap12Binding">
+            <soap12:address location="http://localhost:8080/axis2/services/EHRPatientDetailsServiceInterface"/>
         </wsdl:port>
-        <wsdl:port name="EHRServiceInterfaceHttpEndpoint" binding="ns:EHRServiceInterfaceHttpBinding">
-            <http:address location="http://localhost:8080/axis2/services/EHRServiceInterface"/>
+        <wsdl:port name="EHRPatientDetailsServiceInterfaceHttpEndpoint" binding="ns:EHRPatientDetailsServiceInterfaceHttpBinding">
+            <http:address location="http://localhost:8080/axis2/services/EHRPatientDetailsServiceInterface"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
