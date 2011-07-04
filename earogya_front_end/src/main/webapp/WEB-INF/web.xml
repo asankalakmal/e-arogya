@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>E Arogya</display-name>
+  
+  <servlet>
+    <servlet-name>AxisServlet</servlet-name>
+    <servlet-class>org.apache.axis2.transport.http.AxisServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>   
+     <session-timeout>1</session-timeout>  
+   </session-config> 
+  
+  <filter>
+  	<filter-name>struts2</filter-name>
+  	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class> 
+  </filter>
+
+<filter-mapping>
+  <filter-name>struts2</filter-name>
+   <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+</web-app>

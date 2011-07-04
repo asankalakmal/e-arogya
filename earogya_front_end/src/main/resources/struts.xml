@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="basicstruts2" extends="struts-default">
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		
+		<action name="login" class="org.apache.struts.ehr.login.action.LoginAction" method="execute">
+			<result name="success">/view/home/home.jsp</result>
+			<result name="input">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		
+		<action name="logout" class="org.apache.struts.ehr.login.action.LogoutAction" method="execute">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="add_patient">
+			<result>/view/ehr/add_patient.jsp</result>
+		</action>
+		
+		<action name="admit_patient">
+			<result>/view/ehr/admit_patient.jsp</result>
+		</action>
+		
+		<action name="add_health_records">
+			<result>/view/ehr/add_health_records.jsp</result>
+		</action>
+		
+		<action name="search_patient_details" class="org.apache.struts.ehr.patient_details.action.SearchAction" method="execute">
+			<result name="success">/view/home/home.jsp</result>
+		</action>
+		
+		<action name="search_patient_id" class="org.apache.struts.ehr.search.action.SearchPatientIdAction" method="execute">
+			<result name="success">/view/ehr/admit_patient.jsp</result>
+		</action>
+		
+		<action name="admit_patient_form" class="org.apache.struts.ehr.medical_records.action.AdmitPatientAction" method="execute">
+			<result name="success">/view/ehr/admit_patient.jsp</result>
+			<result name="input">/view/ehr/admit_patient.jsp</result>
+			<result name="error">/view/ehr/admit_patient.jsp</result>
+		</action>
+		
+		<action name="add_health_records_form" class="org.apache.struts.ehr.medical_records.action.MedicalRecordsAction" method="execute">
+			<result name="success">/view/ehr/add_health_records.jsp</result>
+			<result name="input">/view/ehr/add_health_records.jsp</result>
+			<result name="error">/view/ehr/add_health_records.jsp</result>
+		</action>
+	</package>
+</struts>
