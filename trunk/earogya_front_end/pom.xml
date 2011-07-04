@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>earogya_front_end</groupId>
+  <artifactId>earogya_front_end</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>E-arogya</name>
+  <description>This is the front end of earogya</description>
+  
+  <build>
+  	<finalName>Earogya_front_end</finalName>
+  </build>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>2.2.1</version>
+	</dependency>
+	
+	<dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-dojo-plugin</artifactId>
+      <version>2.2.1</version>
+    </dependency>
+    
+	<dependency>
+		<groupId>javassist</groupId>
+		<artifactId>javassist</artifactId>
+		<version>3.8.0.GA</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.14</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>ca.uhn.hapi</groupId>
+            <artifactId>hapi-base</artifactId>
+            <version>1.1</version>
+        </dependency>
+               
+        <dependency>
+            <groupId>ca.uhn.hapi</groupId>
+            <artifactId>hapi-structures-v251</artifactId>
+            <version>1.1</version>
+        </dependency>
+        
+        <dependency>
+    	<groupId>ca.uhn.hapi</groupId>
+    	<artifactId>hapi</artifactId>
+    	<version>1.1</version>
+    	<type>pom</type>
+    </dependency>  
+     
+       <dependency>
+          <groupId>org.apache.axis2</groupId>
+          <artifactId>axis2</artifactId>
+          <version>1.4</version>
+    </dependency>
+    
+     <dependency>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-transport-http</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+    
+     <dependency>
+      <groupId>org.apache.ws.commons.axiom</groupId>
+      <artifactId>axiom-api</artifactId>
+      <version>1.2.8</version>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.apache.ws.commons.axiom</groupId>
+    <artifactId>axiom-impl</artifactId>
+    <version>1.2.8</version>
+</dependency>
+
+<dependency>
+  <groupId>backport-util-concurrent</groupId>
+  <artifactId>backport-util-concurrent</artifactId>
+  <version>3.1</version>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.servicemix.bundles</groupId>
+  <artifactId>org.apache.servicemix.bundles.neethi-2.0.2</artifactId>
+  <version>4.0-m1</version>
+</dependency>
+    
+    <dependency>
+    <groupId>wsdl4j</groupId>
+    <artifactId>wsdl4j</artifactId>
+    <version>1.6.2</version>
+</dependency>
+
+<dependency>
+   <groupId>org.apache.ws.commons.schema</groupId>
+   <artifactId>XmlSchema</artifactId>
+   <version>1.4.2</version>
+</dependency>
+    
+    <dependency>  
+        <groupId>org.apache.maven</groupId>  
+        <artifactId>maven-plugin-api</artifactId>  
+        <version>2.0.4</version>  
+    </dependency>
+    
+     <dependency>  
+        <groupId>org.apache.maven</groupId>  
+        <artifactId>maven-project</artifactId>  
+        <version>2.0.4</version>  
+    </dependency> 
+ </dependencies>
+  
+   <repositories>
+		<repository>
+            <id>hapi-sf</id>
+            <name>HAPI Sourceforge Repository</name>
+            <url>http://hl7api.sourceforge.net/m2</url>
+        </repository> 
+
+     </repositories>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+</project>
