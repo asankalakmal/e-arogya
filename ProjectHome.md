@@ -1,0 +1,1 @@
+electronic Healthcare Management system which allows the management of tasks of the government hospitals in Sri Lanka.
